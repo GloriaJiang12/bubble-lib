@@ -1,0 +1,26 @@
+.bubble-marquee {
+  overflow: hidden;
+  display: flex;
+  height: 100%;
+
+  &-content {
+    height: fit-content; // 不加的话y方向无法滚动
+    &:hover {
+      animation-play-state: paused;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+}
+
+// @keyframes marqueeX {
+//     100% {
+//         transform: translateX(-50%)
+//     }
+// }
+
+// @keyframes marqueeY {
+//     100% {
+//         transform: translateY(-50%)
+//     }
+// }
