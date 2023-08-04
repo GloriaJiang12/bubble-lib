@@ -2,7 +2,7 @@
  * @Author: wj.jiang
  * @Date: 2023-05-30 10:49:59
  * @LastEditors: wj.jiang
- * @LastEditTime: 2023-05-31 14:53:41
+ * @LastEditTime: 2023-07-28 17:17:10
  */
 /**
  * @description 是否让table页数减一(可多选删除)
@@ -39,4 +39,16 @@ export const splitArray = (data: any, subLength: number) => {
     result.push(data.slice(i, (i += subLength)));
   }
   return result;
+};
+
+/**
+ * @param url 文件url
+ * @returns 文件名称
+ */
+export const getFileName = (url: string) => {
+  let cutIndex = url.lastIndexOf('/');
+  if (cutIndex === -1) {
+    cutIndex = url.lastIndexOf('\\');
+  }
+  return url.substr(cutIndex + 1);
 };
